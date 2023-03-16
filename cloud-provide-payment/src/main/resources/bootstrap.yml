@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: mcroservice-payment  #服务名
+  cloud:
+    nacos:
+      config:
+        server-addr: http://localhost:8848
+        # 配置中心配置文件的后缀名格式
+        file-extension: yml
+        # 是否动态刷新，默认为false
+        refresh: true
+        namespace: ed4a3f46-4462-4880-b7c7-e07aaf66467b
+        group: NEW_GROUP
+      discovery:
+        server-addr: http://localhost:8848
+  # 当前环境对应的profile
+  profiles:
+    active: uat
